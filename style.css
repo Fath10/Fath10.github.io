@@ -33,39 +33,44 @@ h2 {
     font-size: 30px;
 }
 
- /* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
   overflow: hidden;
+  background-color: #141414;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+/* Style the navigation bar links */
+.navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 20px;
   text-decoration: none;
-  font-size: 17px;
+  font-family: monospace;
+  font-size: 20px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: #04AA6D;
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
   color: white;
 }
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-} 
 
 /* Column container */
 .row {  
